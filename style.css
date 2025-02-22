@@ -26,7 +26,10 @@
 }
 
 header,
-main,
+.hero,
+.second-inner,
+.video-cont,
+.products-cont,
 footer{
     max-width: 1320px;
     margin: 0 auto;
@@ -37,7 +40,7 @@ footer{
 }
 
 .hero-title{
-    font-size: calc(1.725rem + 5.7vw);
+    font-size: 6rem;
     font-family: "Caveat", serif;
     font-weight: 700;
     margin-top: 3rem;
@@ -55,7 +58,7 @@ footer{
 
 .hero-subtitle{
     font-family: "Caveat", serif;
-    font-size: calc(1.525rem + 3.3vw);  
+    font-size: 4rem;  
     font-weight: 700;
     margin-top: .5rem;
 }
@@ -85,14 +88,15 @@ footer{
     border-color: #5a3c52;
 }
 
-.free{
+/* .free{
     display: none;
-}
+} */
 
 .meet-advisor{
     color: #714b67;
     background-color: #F3F4F6;
-    margin-left: .75rem;
+    margin-left: 1rem;
+    margin-bottom: .5rem;
 }
 
 .meet-advisor:hover{
@@ -108,4 +112,208 @@ footer{
 
 .second{
     background-color: #F3F4F6;
+}
+
+.second-inner{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.background-img{
+    width: 100%;
+}
+
+.figures{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    font-weight: 600;
+    text-align: center;
+}
+
+figure{
+    margin-bottom: 2rem;
+}
+
+figure img{
+    margin-bottom: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    background-color: white;
+}
+
+
+.view-all-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+}
+
+/* slider toggle */
+
+.inp{
+    display: flex;
+    gap: 15px;
+}
+
+.switch{
+    display: none;
+}
+
+.inp-lbl{
+    position: relative;
+    display: block;
+    width: 3rem;
+    height: 1.5rem;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.slide-cont{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: white;
+    border: 1px solid #9c7b94;
+    border-radius: 20px;
+    transition: all .3s ease;
+    
+}
+
+.slide-cont::after{
+    position: absolute;
+    content: "";
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    background: #111827;
+    top: 2px;
+    left: 3px;
+}
+
+.switch:checked + .slide-cont{
+    
+    background: #714B67;
+}
+.switch:checked + .slide-cont::after{
+    transform: translateX(1.4rem);
+    background: white;
+}
+
+.lbl-data{
+    color: #714b67;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.view-all-btn{
+    color: #017e84;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.right-arrow{
+    width: 40px;
+}
+
+
+/* third section */
+
+.third{
+    background-color: #F3F4F6;
+}
+
+.third-cont{
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.first-msg{
+    padding: 3rem;
+}
+
+.second-msg{
+    padding-bottom: 3rem;
+}
+
+/* fourth section */
+
+.fourth{
+    background-color: #F3F4F6;
+    text-align: center;
+}
+
+.fourth-title{
+    font-size: 5rem;
+    font-family: "Caveat", serif;
+    margin-bottom: 6rem;
+}
+
+/* fifth section */
+
+.fifth{
+    background-color: #F3F4F6;
+    text-align: center;
+}
+
+.fifth-title{
+    font-size: 5rem;
+    font-family: "Caveat", serif;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+}
+
+.fifth-lower{
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-top: 5rem;
+    line-height: 1.5;
+}
+
+.down-arrow{
+    rotate: 40deg;
+    padding: 1.5rem 0;
+}
+
+.compare{
+    padding-bottom: 6rem;
+}
+
+.compare-link{
+    font-size: 2rem;
+    font-family: "Caveat", serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: #714B67;
+}
+
+.yt-logo{
+    width: 45px;
+    vertical-align: middle;
+}
+
+.sixth{
+    text-align: center;
+}
+
+.sixth-title{
+    font-size: 5rem;
+    font-family: "Caveat", serif;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.products-cont{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.product{
+    width: 25%;
 }
